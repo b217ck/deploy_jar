@@ -10,9 +10,11 @@
 
 ### Создаем скрипт
 
-1) Скопировать файл app.jar в папку /usr/local/bin (sudo cp /папка/отправитель/app.jar /usr/local/bin)
-2) Создать скрипт в любом текстовом редакторе в папке /usr/local/bin/ и открыть его (sudo touch /usr/local/bin/myapp.sh && sudo nano /usr/local/bin/myapp.sh)
-3) Добавить в открытый файл следующий код
+1) Скопировать файл *app.jar* в папку */usr/local/bin*
+> sudo cp /папка/отправитель/app.jar /usr/local/bin
+3) Создать скрипт в любом текстовом редакторе в папке */usr/local/bin/* и открыть его
+> sudo touch /usr/local/bin/myapp.sh && sudo nano /usr/local/bin/myapp.sh
+5) Добавить в открытый файл следующий код
 ```
 #!/bin/sh
 SERVICE_NAME=myapp
@@ -55,7 +57,8 @@ restart)
  esac
 ```
 
-4) Добавить скрипту права на запуск (sudo chmod +x /usr/local/bin/myapp.sh)
+4) Добавить скрипту права на запуск
+> sudo chmod +x /usr/local/bin/myapp.sh
 
 ### Протестировать скрипт на запуск-стоп-перезапуск можно следующими командами:
 ```
@@ -66,8 +69,9 @@ restart)
 
 ### 5) Создаем демон
 
-6) Создать файл myapp.service в любом текстовом редакторе в папке /etc/systemd/system/ и открыть его. (sudo touch /etc/systemd/system/ && sudo nano /etc/systemd/system/myapp.service)
-7) Добавить в открытый файл следующий код
+6) Создать файл myapp.service в любом текстовом редакторе в папке */etc/systemd/system/* и открыть его.
+> sudo touch /etc/systemd/system/ && sudo nano /etc/systemd/system/myapp.service
+8) Добавить в открытый файл следующий код
 ~~~
 [Unit]
  Description = Deploy Java Service
@@ -86,7 +90,9 @@ restart)
 ~~~
 
 8) Сохранить и выйти из текстового редактора
-9) Перезагрузить настройки демонов (sudo systemctl daemon-reload) - команда выполняется каждый раз после внесения изменений в файл конфигурации демонов.
+9) Перезагрузить настройки демонов
+> sudo systemctl daemon-reload
+- команда выполняется каждый раз после внесения изменений в файл конфигурации демонов.
 
 ### Управлять работой демона можно следующими командами
 ```
