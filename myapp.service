@@ -1,0 +1,14 @@
+[Unit]
+ Description = Deploy Java Service
+ StartLimitInterval=200
+ StartLimitBurst=5
+[Service]
+ Type=forking
+ Restart=always
+ RestartSec=30
+ SuccessExitStatus=143 
+ ExecStart=/usr/local/bin/myapp.sh start
+ ExecStop=/usr/local/bin/myapp.sh stop
+ ExecReload=/usr/local/bin/myapp.sh reload
+[Install]
+ WantedBy=multi-user.target
