@@ -55,7 +55,7 @@ restart)
  esac
 ```
 
-4) Добавить скрипту права на запуск (sudo chmod +x /usr/local/bin/Service_Name.sh)
+4) Добавить скрипту права на запуск (sudo chmod +x /usr/local/bin/myapp.sh)
 
 ### Протестировать скрипт на запуск-стоп-перезапуск можно следующими командами:
 ```
@@ -66,7 +66,7 @@ restart)
 
 ### 5) Создаем демон
 
-6) Создать файл в любом текстовом редакторе в папке /etc/systemd/system/ и отркрыть его. (sudo touch /etc/systemd/system/ && sudo nano /etc/systemd/system/myapp.service)
+6) Создать файл myapp.service в любом текстовом редакторе в папке /etc/systemd/system/ и открыть его. (sudo touch /etc/systemd/system/ && sudo nano /etc/systemd/system/myapp.service)
 7) Добавить в открытый файл следующий код
 ~~~
 [Unit]
