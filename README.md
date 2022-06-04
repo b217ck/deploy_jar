@@ -67,11 +67,11 @@ restart)
 /usr/local/bin/./myapp.sh restart
 ```
 
-### 5) Создаем демон
+### Создаем демон
 
-6) Создать файл myapp.service в любом текстовом редакторе в папке */etc/systemd/system/* и открыть его.
+1) Создать файл myapp.service в любом текстовом редакторе в папке */etc/systemd/system/* и открыть его.
 > sudo touch /etc/systemd/system/ && sudo nano /etc/systemd/system/myapp.service
-8) Добавить в открытый файл следующий код
+2) Добавить в открытый файл следующий код
 ~~~
 [Unit]
  Description = Deploy Java Service
@@ -89,8 +89,8 @@ restart)
  WantedBy=multi-user.target
 ~~~
 
-8) Сохранить и выйти из текстового редактора
-9) Перезагрузить настройки демонов
+3) Сохранить и выйти из текстового редактора
+4) Перезагрузить настройки демонов
 > sudo systemctl daemon-reload
 *(команда выполняется каждый раз после внесения изменений в файл конфигурации демонов).*
 
